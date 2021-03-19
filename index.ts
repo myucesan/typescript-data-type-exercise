@@ -38,7 +38,7 @@ function checkoutMovie(
   movie: Movie,
   inventory: Inventory,
   checkoutLog: CheckoutLog,
-  userId: number[]
+  userId: number
 ) {
   if (inventory.isInStock(movie.title)) {
     inventory.reduceQuantity(movie.title, 1);
@@ -60,7 +60,7 @@ class Inventory {
 }
 
 class CheckoutLog {
-  add(movieTitle: string, userId: number[]) {
+  add(movieTitle: string, userId: number) {
     // implementation
   }
 }
